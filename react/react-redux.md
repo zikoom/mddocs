@@ -11,3 +11,6 @@ react-redux
 
 
 ## 2. redux의 구성요소와 역할
+
+
+test
