@@ -58,5 +58,8 @@ cors preflight를 보내야 하는 상황이라면 브라우저에서 자동으�
 
 <br />
 <br />
-출처: https://developer.mozilla.org/ko/docs/Web/HTTP/CORS
+출처:
+<br />
+https://developer.mozilla.org/ko/docs/Web/HTTP/CORS
+<br />
 https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
