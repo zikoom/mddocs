@@ -23,6 +23,40 @@ corss-origin request의 예시:
 
 
 
+### CORS preflight
+
+CORS preflight는 CORS 요청을 보내기 전 서버 측에서 해당 요청이 사용가능한지 확인하기 위해 보내는 요청입니다.
+
+cors preflight를 보내야 하는 상황이라면 브라우저에서 자동으로 전송합니다.
 
 
+### CORS 요청 시나리오
+<br />
+
+#### 단순요청
+
+몇몇 요청은 CORS preflight를 발생시키지 않습니다. 이런 요청들을 simple request 라고 부릅니다.
+
+다음 요청을 만족하는 요청을 simple request라고 부릅니다.
+
+- 다음 중 하나의 메소드
+  - GET
+  - HEAD
+  - POST
+- ([Fetch 명세에서 “CORS-safelisted request-header”로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header))
+  - Accept
+  - Accept-Language
+  - Content_language
+  - Content-type (application/x-www-form-urlencoded, multipart/form-data, text/plain)
+
+- ReadableStrema 객체가 사용되지 않아야함
+
+
+### CORS preflight 요청
+
+요청을 보내기전 OPTIONS 메소드를 통해 요청을 보낼 도메인을 preflight 요청을 보내 실제 요청을 보내기에 안전한지 확인합니다.
+
+<br />
+<br />
 출처: https://developer.mozilla.org/ko/docs/Web/HTTP/CORS
+https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
